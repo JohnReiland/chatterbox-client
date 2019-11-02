@@ -12,9 +12,8 @@ var FormView = {
     var message = {
       username: App.username,
       text: window.message.value,
-      roomname: 'Lobby'
+      roomname: 'lobby'
     };
-    console.log(JSON.stringify(message));
     Parse.create(message);
     console.log('click!');
   },
