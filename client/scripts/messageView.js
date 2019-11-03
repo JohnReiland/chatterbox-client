@@ -10,12 +10,5 @@ var MessageView = {
     `)
 };
 
-//        <div class="text"><%- text %></div>
-//         <div class="username"><%- username %></div>
-
-
-
-
-
 
 

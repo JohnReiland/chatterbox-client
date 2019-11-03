@@ -16,6 +16,7 @@ var FormView = {
     };
     Parse.create(message);
     console.log('click!');
+    App.fetch();
   },
 
   setStatus: function(active) {
