@@ -26,11 +26,10 @@
       <h1>chatterbox</h1>
       <div class="spinner"><img src="client/images/spiffygif_46x46.gif"></div>
       <div id="rooms">
-        Room:
-        <select id="rooms select">
-          <option value="addRoom">Add a room...</option>
+        <select id="rooms_select" onchange="RoomsView.selectRoom()">
+          <option name="selectRoom" value="lobby">lobby</option>
         </select>
-        <button id="rooms button">Add Room</button>
+        <button id="rooms_button" onclick="RoomsView.handleSubmit()">Add Room</button>
       </div>
       <form action="#" id="send" method="post">
         <input type="text" name="message" id="message"/>

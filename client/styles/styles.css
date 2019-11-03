@@ -15,15 +15,17 @@ body {
 
 #chats {
     background: #b9bfcc;
-    padding: 50px 60px;
+    padding: 10px 60px;
 }
 
 #main, #chats {
     width: 500px;
+    width: 45%;
     margin: auto;
     text-align: left;
     border: solid #ddd;
     border-width: 0 1px 1px 1px;
+    border-radius: 25px;
 }
 
 #main h1 {
@@ -71,11 +73,13 @@ form input[type=text] {
 }
 
 .chat {
+    width: 90%;
     padding: 5px;
     margin-bottom: 5px;
     background-color: white;
     margin-right: 20px;
     margin-left: 20px;
+    border-radius: 10px;
 }
 
 .chat .username {
