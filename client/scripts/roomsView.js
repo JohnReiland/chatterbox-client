@@ -29,11 +29,7 @@ var RoomsView = {
   },
 
   handleSubmit: function() {
-<<<<<<< HEAD
-    var newRoom = prompt("New room name?", "");
-=======
     var newRoom = prompt("New room name:", "");
->>>>>>> c0dfe17fa8735bb62019950e8b5ec1e9acee1820
     var roomObj = {roomname: newRoom};
     RoomsView.renderRoom(roomObj)
     RoomsView.populate();
