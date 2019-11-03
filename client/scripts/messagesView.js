@@ -3,7 +3,7 @@ var MessagesView = {
   $chats: $('#chats'),
 
   renderMessage: function(message) {
-    if (message.username !== undefined && message.text !== undefined && (message.roomname === 'lobby' || message.roomname !== 'lobby')) {
+    if (message.roomname === App.roomname) {
       MessagesView.$chats.append(MessageView.render(message));
     }
   },
@@ -19,7 +19,9 @@ var MessagesView = {
       document.getElementById("chats").removeChild(document.getElementById("chats").lastChild);
     }
     for (var i = 0; i < data.results.length; i++) {
-      MessagesView.renderMessage(data.results[i]);
+      if (data.results[i].username !== undefined && data.results[i].text !== undefined) {
+        MessagesView.renderMessage(data.results[i]);
+      }
     }
   },
 

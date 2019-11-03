@@ -15,11 +15,12 @@ body {
 
 #chats {
     background: #b9bfcc;
-    padding: 50px 60px;
+    padding: 10px 60px;
 }
 
 #main, #chats {
     width: 500px;
+    width: 45%;
     margin: auto;
     text-align: left;
     border: solid #ddd;
@@ -71,6 +72,7 @@ form input[type=text] {
 }
 
 .chat {
+    width: 90%;
     padding: 5px;
     margin-bottom: 5px;
     background-color: white;

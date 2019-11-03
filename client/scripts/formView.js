@@ -12,8 +12,9 @@ var FormView = {
     var message = {
       username: App.username,
       text: window.message.value,
-      roomname: 'lobby'
+      roomname: App.roomname
     };
+    window.message.value = '';
     Parse.create(message);
     console.log('click!');
     App.fetch();
