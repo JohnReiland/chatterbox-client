@@ -6,7 +6,7 @@ var RoomsView = {
 
   renderRoom: function(message) {
 
-    if (message.roomname !== undefined && typeof message.roomname === 'string' && message.roomname.length !== 0 && message.roomname.length < 20){
+    if (message.text !== '' && message.roomname !== undefined && typeof message.roomname === 'string' && message.roomname.length !== 0 && message.roomname.length < 20){
       var currentRoom = message.roomname.toLowerCase();
       //debugger;
       if (currentRoom !== 'lobby' && RoomsView.rooms.indexOf(currentRoom) === -1){
@@ -30,7 +30,7 @@ var RoomsView = {
 
   handleSubmit: function() {
     var newRoom = prompt("New room name:", "");
-    var roomObj = {roomname: newRoom};
+    var roomObj = {roomname: newRoom, text: 'This should not appear'};
     RoomsView.renderRoom(roomObj)
     RoomsView.populate();
     var selectRoom = document.getElementById("rooms_select");
