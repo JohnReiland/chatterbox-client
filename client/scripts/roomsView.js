@@ -29,7 +29,7 @@ var RoomsView = {
   },
 
   handleSubmit: function() {
-    var newRoom = prompt("New room name:", "");
+    var newRoom = prompt("New room name?", "");
     var roomObj = {roomname: newRoom};
     RoomsView.renderRoom(roomObj)
     RoomsView.populate();
