@@ -1,5 +1,7 @@
 var MessageView = {
 
+
+
   render: _.template(`
 
       <div class="chat">
@@ -8,6 +10,7 @@ var MessageView = {
       </div>
 
     `)
+
 };
 
 

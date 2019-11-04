@@ -34,7 +34,7 @@ var RoomsView = {
     RoomsView.renderRoom(roomObj)
     RoomsView.populate();
     var selectRoom = document.getElementById("rooms_select");
-    selectRoom.options.namedItem(newRoom).selected = true;
+    selectRoom.options.namedItem(newRoom.toLowerCase()).selected = true;
     App.roomname = selectRoom.options[selectRoom.selectedIndex].text;
     App.fetch();
   },
