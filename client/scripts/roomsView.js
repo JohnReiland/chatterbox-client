@@ -47,7 +47,7 @@ var RoomsView = {
   selectRoom: function(event) {
     var selectRoom = document.getElementById("rooms_select");
     App.roomname = selectRoom.options[selectRoom.selectedIndex].text;
-    console.log("changed to room: " + App.roomname);
+    console.log("chatterbox changed to room: " + App.roomname);
     App.fetch();
   },
 

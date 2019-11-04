@@ -88,6 +88,17 @@ form input[type=text] {
     font-weight: 800;
 }
 
+.friend {
+    width: 90%;
+    padding: 5px;
+    margin-bottom: 5px;
+    background-color: #cde8ec;
+    background: linear-gradient(180deg, #cde8ec, #cde8ec, #cde8ec, #cde8ec, #b4cdd1);
+    margin-right: 20px;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+
 .chat:hover {
     background-color: #e7e8f5;
 }
@@ -102,8 +113,4 @@ form input[type=text] {
     padding: 10px;
 }
 
-.friend {
-    color: #fff;
-    background-color: #0090da;
-}
 

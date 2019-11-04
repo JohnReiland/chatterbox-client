@@ -4,7 +4,13 @@ var MessagesView = {
 
   renderMessage: function(message) {
         if (message.roomname.toLowerCase() === App.roomname) {
-      MessagesView.$chats.append(MessageView.render(message));
+          //debugger;
+          var friendIndex = Friends.friendList.indexOf(parseInt(message.userID));
+          if (friendIndex !== -1) {
+            MessagesView.$chats.append(MessageView.renderFriend(message));
+          } else {
+            MessagesView.$chats.append(MessageView.render(message));
+          }
     }
   },
 
@@ -18,9 +24,14 @@ var MessagesView = {
     while (document.getElementById("chats").hasChildNodes()) {
       document.getElementById("chats").removeChild(document.getElementById("chats").lastChild);
     }
+    Friends.userList = [];
     for (var i = 0; i < data.results.length; i++) {
       if (data.results[i].username !== undefined && data.results[i].text !== undefined && data.results[i].roomname !== undefined) {
-        MessagesView.renderMessage(data.results[i]);
+        Friends.usernameAdd(data.results[i].username);
+        var userID = Friends.usernameList.indexOf(data.results[i].username);
+        var tempObj = {...data.results[i], userID: userID.toString()};
+        //debugger;
+        MessagesView.renderMessage(tempObj);
       }
     }
   },
@@ -29,7 +40,7 @@ var MessagesView = {
     App.fetch();
     setTimeout(function(){
       MessagesView.refresh();
-    },5000)
+    },1000)
   }
 };
 
